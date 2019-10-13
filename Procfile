@@ -1,1 +1,1 @@
-web gunicorn app:article_recommender
+web gunicorn app:app
