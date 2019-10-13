@@ -40,7 +40,7 @@ def index(post_id):
 
     #checking out the post table
     #POSTS = pd.read_sql_query('select * from posts', ENGINE)
-    POSTS = pd.read_json('https://github.com/hngi/team_python/blob/master/json_data/lucid_table_posts.json')
+    POSTS = pd.read_csv('lucid_table_posts.csv')
     POSTS.drop(['user_id', 'tags', 'slug', 'created_at', 'updated_at', 'image',
                 'status_id', 'action', 'post_id'], axis=1, inplace=True)
     POSTS.rename(columns={"id":"post_id"}, inplace=True)
